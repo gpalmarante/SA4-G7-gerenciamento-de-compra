@@ -34,7 +34,7 @@ public class UsuarioDAO {
         AcessoMysql.closeConnection(con, stmt);
         }
     }
-      public Boolean verifcaLogin(Login L ) {
+     public Boolean verifcaLogin(Login L) {
         //System.out.println(L.getUsuario()+"verificaLogin");
         Connection con = AcessoMysql.getConnection();
         PreparedStatement stmt = null;
@@ -42,33 +42,51 @@ public class UsuarioDAO {
        
         Usuario UsVerifica = new Usuario();
        // System.out.println("antes try");
+       // String query = "SELECT usuario, senha FROM usuarios WHERE usuario = 'gege';";
+       // String query = "SELECT * FROM usuarios;";
+       // Statement st = null;
+        
+        
+        
         try{
-            stmt = con.prepareStatement("SELECT usuario, senha FROM usuarios WHERE usuario = '?';");
+            stmt = con.prepareStatement("SELECT usuario, senha FROM usuarios WHERE usuario = ?;");
             stmt.setString(1,L.getUsuario());
             rs = stmt.executeQuery();
-            
-          // System.out.println(rs.getString("usuario")+"depois do query1");
+        //	st = con.createStatement();
+          //  rs = st.executeQuery(query);
+            if(rs!= null && rs.next()) {
+           System.out.println(rs.getString("usuario")+"depois do query1");
             UsVerifica.setUsuario(rs.getString("usuario"));
             UsVerifica.setSenha(rs.getString("senha"));
-            //System.out.println(UsVerifica.getSenha()+"depois do query2");
-            
+           System.out.println(UsVerifica.getSenha()+"depois do query2");
+            }
             }
         catch(SQLException ex){
-                     System.out.println("erro na verificação");
+                     System.out.println("erro "+ ex.getMessage());
             }
         finally{
             try {
                 AcessoMysql.closeConnection(con, stmt, rs);
+                System.out.println("conecção fechada");
             } catch (SQLException ex) {
                 Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-       
-           
-        if ((L.getUsuario() == UsVerifica.getUsuario()) && (L.getSenha()== UsVerifica.getSenha())){
-                return true;
+        System.out.println(L.getUsuario());
+        		System.out.println(UsVerifica.getUsuario());
+        				System.out.println(L.getSenha());
+        						System.out.println(UsVerifica.getSenha());
+           String  LN =L.getUsuario();
+           String LS =L.getSenha();
+           String VN=UsVerifica.getUsuario();
+           String VS=UsVerifica.getSenha();
+        		
+     //   if (((L.getUsuario()).equals == (UsVerifica.getUsuario())) && ((L.getSenha()) == (UsVerifica.getSenha()))){
+           if ( LN.equals(VN) && LS.equals(VS)) {
+        	 System.out.println("resultado verdadeiro");
+        	return true;
             }else{
-                
+            	System.out.println("resultado falso");
                 return false;
             }
       }
