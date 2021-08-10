@@ -7,11 +7,12 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sa4.TelaLoginController">
    <children>
-      <TextField fx:id="TxtLogin" layoutX="226.0" layoutY="94.0" promptText="Loguin" />
+      <TextField fx:id="TxtLogin" layoutX="226.0" layoutY="94.0" promptText="Login" />
       <TextField fx:id="TxtSenha" layoutX="226.0" layoutY="136.0" promptText="Senha" />
       <Button id="BntLoguin" fx:id="BtnLogar" layoutX="226.0" layoutY="200.0" mnemonicParsing="false" onAction="#BtnAcaoLogar" prefHeight="25.0" prefWidth="149.0" text="Logar" />
-      <Button id="BtnCadastar" layoutX="226.0" layoutY="245.0" mnemonicParsing="false" onAction="#BtnAcaoCadastar" prefHeight="25.0" prefWidth="149.0" text="Cadastar" />
+      <Button id="BtnCadastar" layoutX="226.0" layoutY="245.0" mnemonicParsing="false" onAction="#BtnAcaoCadastar" prefHeight="25.0" prefWidth="149.0" text="Cadastar usuario" />
       <Label layoutX="170.0" layoutY="98.0" text="Usuario  :" />
       <Label layoutX="171.0" layoutY="140.0" text="Senha    :" />
+      <Button id="BtnCadastar" layoutX="226.0" layoutY="293.0" mnemonicParsing="false" onAction="#BtnAcaoCadastarProduto" prefHeight="25.0" prefWidth="149.0" text="Cadastar Produto" />
    </children>
 </AnchorPane>

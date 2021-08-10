@@ -5,8 +5,10 @@
  */
 package com.mycompany.sa4;
 
+import ModelDAO.UsuarioDAO;
 import com.mycompany.sa4.Model.Usuario;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.fxml.FXML;
@@ -33,8 +35,9 @@ public class TelaCadastarController {
      public List<Usuario> Usuarios = new ArrayList<>(); 
        
     @FXML
-    private void BtnCadCadastar() throws IOException {
-                  Usuario novoUsuario = new Usuario();
+    private void BtnCadCadastar() throws IOException , ClassNotFoundException, SQLException{
+        //pega todos os textos dos campos e cria o novoUsuario        
+        Usuario novoUsuario = new Usuario();
                      novoUsuario.setNome(TxtCadNome.getText());
                      novoUsuario.setSobreNome(TxtCadSobrenome.getText());
                      novoUsuario.setSexo(TxtCadSexo.getText());
@@ -42,9 +45,13 @@ public class TelaCadastarController {
                      novoUsuario.setSenha(TxtCadSenha.getText());
                      novoUsuario.setDataNacimento(TxtCadData.toString());
                      
-           Usuarios.add(novoUsuario);
-                  System.out.println("usuario "+ Usuarios.get(0).getNome()+" Salvo com sucesso!");
+                   
+                   // manda para graver no banco o novo usuario
+                  UsuarioDAO dao  = new UsuarioDAO();
+                  dao.create(novoUsuario);
+                  App.setRoot("TelaLogin03");
     }
+                  
     @FXML
     private void BtnCadApagar() throws IOException {
                TxtCadNome.setText("");

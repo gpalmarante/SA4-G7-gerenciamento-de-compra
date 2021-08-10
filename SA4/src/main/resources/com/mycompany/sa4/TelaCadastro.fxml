@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sa4.TelaCadastarController">
    <children>
@@ -23,5 +24,10 @@
       <TextField fx:id="TxtCadUsuario" layoutX="168.0" layoutY="188.0" prefHeight="25.0" prefWidth="382.0" />
       <TextField fx:id="TxtCadSenha" layoutX="168.0" layoutY="226.0" prefHeight="25.0" prefWidth="382.0" />
       <DatePicker fx:id="TxtCadData" layoutX="376.0" layoutY="145.0" />
+      <Label layoutX="205.0" layoutY="10.0" text="Cadastro de usuarios">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

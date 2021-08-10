@@ -101,7 +101,6 @@ public class Usuario {
     public String getDataNacimento() {
         return DataNacimento;
     }
-
     /**
      * @param DataNacimento the DataNacimento to set
      */

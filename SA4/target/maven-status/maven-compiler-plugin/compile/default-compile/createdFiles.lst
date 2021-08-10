@@ -1,2 +1,12 @@
+com\mycompany\sa4\Model\Produtos.class
+com\mycompany\sa4\TelaProdutosController.class
+com\mycompany\sa4\TelaCadastarController.class
+com\mycompany\sa4\Model\Login.class
+com\mycompany\sa4\Banco\AcessoMysql.class
+com\mycompany\sa4\TelaCadastroProdutoController.class
+ModelDAO\ProdutoDAO.class
 module-info.class
-com\mycompany\sa4\PrimaryController.class
+com\mycompany\sa4\App.class
+com\mycompany\sa4\TelaLoginController.class
+ModelDAO\UsuarioDAO.class
+com\mycompany\sa4\Model\Usuario.class

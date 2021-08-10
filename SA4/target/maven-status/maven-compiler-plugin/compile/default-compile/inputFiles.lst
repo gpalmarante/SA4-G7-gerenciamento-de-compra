@@ -1,9 +1,12 @@
-C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\PrimaryController.java
 C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\TelaProdutosController.java
 C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\Model\Produtos.java
 C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\TelaLoginController.java
+C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\ModelDAO\UsuarioDAO.java
 C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\App.java
-C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\SecondaryController.java
+C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\ModelDAO\ProdutoDAO.java
+C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\Banco\AcessoMysql.java
 C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\Model\Usuario.java
+C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\TelaCadastroProdutoController.java
 C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\TelaCadastarController.java
+C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\com\mycompany\sa4\Model\Login.java
 C:\Users\gpalmarante\Documents\NetBeansProjects\SA4\src\main\java\module-info.java

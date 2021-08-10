@@ -20,16 +20,16 @@ public class TelaProdutosController {
                   
     }
     @FXML
-    private void BtnProlistar() throws IOException {
+    private void BtnProListar() throws IOException {
                   
     }
-      @FXML
-     private void BtnProSair() throws IOException {
+    @FXML
+    private void BtnProSair() throws IOException {
                   
     }
-      @FXML
-     private void BtnProLogoff() throws IOException {
-                  
+    @FXML
+    private void BtnProLogoff() throws IOException {
+                  App.setRoot("TelaLogin03");
     }
       
     
