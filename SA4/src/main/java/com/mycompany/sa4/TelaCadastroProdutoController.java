@@ -5,10 +5,8 @@
  */
 package com.mycompany.sa4;
 
-import ModelDAO.ProdutoDAO;
-import ModelDAO.UsuarioDAO;
+import com.mycompany.sa4.ModelDAO.ProdutoDAO;
 import com.mycompany.sa4.Model.Produtos;
-import com.mycompany.sa4.Model.Usuario;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -27,15 +25,21 @@ public class TelaCadastroProdutoController {
                    novoProduto.setModelo(TxtProdModelo.getText());
                    novoProduto.setMarca(TxtProdMarca.getText());
                    novoProduto.setTipo(TxtProdTipo.getText());
-                   novoProduto.setQtdComprada(TxtProdQtd.getText());
+               
                     
                      
                    
-                   // manda para graver no banco o novo usuario
+                   // manda para gravar no banco o novo usuario
                   ProdutoDAO dao  = new ProdutoDAO();
                   dao.create(novoProduto);
-                  App.setRoot("TelaLogin03");
+                  App.setRoot(App.UltimaTela);
               
          
+     }
+     @FXML
+     private void BtnProVoltar() throws IOException {
+    	 
+    	 App.setRoot(App.UltimaTela);
+    	 
      }
 }

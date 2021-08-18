@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ListaProdutos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="255.0" layoutY="66.0" mnemonicParsing="false" onAction="#BtnListEntrada" text="Entrada" />
+      <Button layoutX="336.0" layoutY="66.0" mnemonicParsing="false" onAction="#BtnListRetirada" text="Retirada" />
+      <Label layoutX="4.0" layoutY="11.0" text="Tipo :" />
+      <Label layoutX="4.0" layoutY="38.0" text="Marca  :" />
+      <Label layoutX="5.0" layoutY="70.0" text="Modelo  :" />
+      <Label fx:id="TxtListTipo" layoutX="83.0" layoutY="11.0" text="Label" />
+      <Label fx:id="TxtListMarca" layoutX="83.0" layoutY="38.0" text="Label" />
+      <Label fx:id="TxtListModelo" layoutX="83.0" layoutY="68.0" text="Label" />
+      <Label layoutX="161.0" layoutY="12.0" text="em estoque" />
+      <Label fx:id="TxtListEstoque" layoutX="178.0" layoutY="43.0" text="50">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TxtListQtdEntrada" layoutX="248.0" layoutY="9.0" prefHeight="25.0" prefWidth="70.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtListQtdRetirada" layoutX="332.0" layoutY="9.0" prefHeight="25.0" prefWidth="70.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

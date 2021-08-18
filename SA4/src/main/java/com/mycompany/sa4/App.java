@@ -1,6 +1,5 @@
 package com.mycompany.sa4;
 
-import com.mycompany.sa4.Model.Usuario;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,15 +7,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * JavaFX App
  */
 public class App extends Application {
 
-    private static Scene scene;
+    static String UltimaTela = "";
+	private static Scene scene;
+	 
    
     
     @Override
@@ -39,6 +39,12 @@ public class App extends Application {
         launch();
         
         
+    }
+    public static void RegUltimaTela(String tela) {
+    	
+    	UltimaTela = tela ;
+    	
+    	
     }
   
 }

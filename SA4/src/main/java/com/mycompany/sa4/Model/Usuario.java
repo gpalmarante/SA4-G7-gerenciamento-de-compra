@@ -5,6 +5,8 @@
  */
 package com.mycompany.sa4.Model;
 
+import com.mycompany.sa4.Enums.UsuarioGenero;
+
 /**
  *
  * @author gpalmarante
@@ -56,15 +58,15 @@ public class Usuario {
     /**
      * @return the Sexo
      */
-    public String getSexo() {
+    public UsuarioGenero getSexo() {
         return Sexo;
     }
 
     /**
      * @param Sexo the Sexo to set
      */
-    public void setSexo(String Sexo) {
-        this.Sexo = Sexo;
+    public void setSexo(UsuarioGenero sexo) {
+        this.Sexo = sexo;
     }
 
     /**
@@ -107,10 +109,16 @@ public class Usuario {
     public void setDataNacimento(String DataNacimento) {
         this.DataNacimento = DataNacimento;
     }
+    public enum Genero{
+    	Masculino,
+    	Feminino,
+    	outros
+    	
+    }
     private int Id;
     private String Nome;
     private String SobreNome;
-    private String Sexo;
+    private UsuarioGenero Sexo;
     private String Usuario;
     private String Senha;
     private String DataNacimento;
