@@ -5,14 +5,13 @@
  */
 package com.mycompany.sa4;
 
-import ModelDAO.UsuarioDAO;
+import com.mycompany.sa4.ModelDAO.UsuarioDAO;
 import com.mycompany.sa4.Model.Login;
-import com.mycompany.sa4.Model.Usuario;
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 
 /**
@@ -33,15 +32,23 @@ public class TelaLoginController {
                 Login login = new Login();
                 login.setUsuario(TxtLogin.getText());
                 login.setSenha(TxtSenha.getText());
+                
                System.out.println(login.getUsuario());
                 UsuarioDAO dao  = new UsuarioDAO();
                 
-                if (dao.verifcaLogin(login)!= null){
+                if (dao.verifcaLogin(login)){
                     App.setRoot("TelaProdutos");
-                    Logger.getLogger("erro na invalido");
+                    System.out.println("login");
                 }
                 else {
-                 Logger.getLogger("erro na verificação");
+                	System.out.println("dao-falso");
+                	Alert alert = new Alert(AlertType.WARNING, "Senha ou usuario incompativeis", ButtonType.CANCEL);
+                	alert.showAndWait();
+
+                	if (alert.getResult() == ButtonType.YES) {
+                	    //do stuff
+                	}
+                
                 }
     }
     @FXML 

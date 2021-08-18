@@ -4,15 +4,32 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sa4.TelaLoginController">
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sa4.TelaLoginController">
    <children>
-      <TextField fx:id="TxtLogin" layoutX="226.0" layoutY="94.0" promptText="Login" />
-      <TextField fx:id="TxtSenha" layoutX="226.0" layoutY="136.0" promptText="Senha" />
-      <Button id="BntLoguin" fx:id="BtnLogar" layoutX="226.0" layoutY="200.0" mnemonicParsing="false" onAction="#BtnAcaoLogar" prefHeight="25.0" prefWidth="149.0" text="Logar" />
-      <Button id="BtnCadastar" layoutX="226.0" layoutY="245.0" mnemonicParsing="false" onAction="#BtnAcaoCadastar" prefHeight="25.0" prefWidth="149.0" text="Cadastar usuario" />
-      <Label layoutX="170.0" layoutY="98.0" text="Usuario  :" />
-      <Label layoutX="171.0" layoutY="140.0" text="Senha    :" />
-      <Button id="BtnCadastar" layoutX="226.0" layoutY="293.0" mnemonicParsing="false" onAction="#BtnAcaoCadastarProduto" prefHeight="25.0" prefWidth="149.0" text="Cadastar Produto" />
+      <Pane layoutX="189.0" layoutY="105.0" prefHeight="211.0" prefWidth="263.0" style="-fx-background-color: lightgray; -fx-background-radius: 10;" />
+      <TextField fx:id="TxtLogin" layoutX="275.0" layoutY="119.0" promptText="Login" />
+      <TextField fx:id="TxtSenha" accessibleRole="PASSWORD_FIELD" layoutX="275.0" layoutY="161.0" promptText="Senha" />
+      <Button id="BntLoguin" fx:id="BtnLogar" layoutX="218.0" layoutY="227.0" mnemonicParsing="false" onAction="#BtnAcaoLogar" prefHeight="25.0" prefWidth="208.0" text="Logar" />
+      <Button id="BtnCadastar" layoutX="218.0" layoutY="272.0" mnemonicParsing="false" onAction="#BtnAcaoCadastar" prefHeight="25.0" prefWidth="208.0" text="Cadastar usuario" />
+      <Label layoutX="219.0" layoutY="123.0" text="Usuario  :" />
+      <Label layoutX="220.0" layoutY="165.0" text="Senha    :" />
+      <Label layoutX="189.0" layoutY="23.0" text="Sistema Grupo 6">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="213.0" layoutY="70.0" text="Controle de estoque">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="242.0" layoutY="368.0" text="Geisson da Rocha Palmarante" />
+      <Label layoutX="224.0" layoutY="419.0" text="Fernanda Malheiros Rodrigues Alves" />
+      <Label layoutX="296.0" layoutY="385.0" text="Ana Back" />
+      <Label layoutX="251.0" layoutY="402.0" text="Matheus Massaneiro Melo" />
+      <Label layoutX="274.0" layoutY="351.0" text="Desenvolvido por:" />
    </children>
 </AnchorPane>

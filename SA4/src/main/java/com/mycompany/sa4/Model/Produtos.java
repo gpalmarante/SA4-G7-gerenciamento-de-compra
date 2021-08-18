@@ -10,8 +10,56 @@ package com.mycompany.sa4.Model;
  * @author gpalmarante
  */
 public class Produtos {
+			private int Id;
+			private String Modelo;
+			private String Marca;
+			private String Tipo;
+	    
+			private int QtdComprada;
+			private int QtdStoque;
+	    	private int QtdVendidas;
+	    
+	    	private int ValorCompra;
+	    	private int ValorVenda;
+	    
+	    
+	public int getQtdStoque() {
+			return QtdStoque;
+		}
 
-    /**
+	public void setQtdStoque(int qtdStoque) {
+			QtdStoque = qtdStoque;
+		}
+
+	public int getQtdVendidas() {
+			return QtdVendidas;
+		}
+
+	public void setQtdVendidas(int qtdVendidas) {
+			QtdVendidas = qtdVendidas;
+		}
+
+	public int getValorCompra() {
+			return ValorCompra;
+		}
+
+	public void setValorCompra(int valorCompra) {
+			ValorCompra = valorCompra;
+		}
+
+	public int getValorVenda() {
+			return ValorVenda;
+		}
+
+	public void setValorVenda(int valorVenda) {
+			ValorVenda = valorVenda;
+		}
+
+	public void setQtdComprada(int qtdComprada) {
+			QtdComprada = qtdComprada;
+		}
+
+	/**
      * @return the Id
      */
     public int getId() {
@@ -70,21 +118,9 @@ public class Produtos {
     /**
      * @return the QtdComprada
      */
-    public String getQtdComprada() {
+    public int getQtdComprada() {
         return QtdComprada;
     }
 
-    /**
-     * @param QtdComprada the QtdComprada to set
-     */
-    public void setQtdComprada(String QtdComprada) {
-        this.QtdComprada = QtdComprada;
-    }
-
-    private int Id;
-    private String Modelo;
-    private String Marca;
-    private String Tipo;
-    private String QtdComprada;
-    
+      
 }
