@@ -16,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Alert.AlertType;
 import com.mycompany.sa4.ModelDAO.ProdutoDAO;
@@ -25,16 +26,25 @@ import com.mycompany.sa4.Model.Produtos;
  *
  * @author gpalmarante
  */
-public class TelaProdutosController implements Initializable {
+public class TelaProdutosController  extends App  implements Initializable  {
     
     
     @FXML 
     private ListView<Produtos> listViewProdutos; 
+    @FXML
+    private Label TxtProNome;
    
     private ObservableList<Produtos> ProdutosObservableList;
     
+    
     public TelaProdutosController() {
     	 System.out.println("tela Produtos 01");
+    	 System.out.println(reg.getNome()+"nome produtos 1");
+    	 
+    	 //String nome = reg.getNome();
+    	
+    	 
+    	 
     	ProdutoDAO LproDAO = new ProdutoDAO();
     	List<Produtos> LP = new ArrayList<>();
     	ProdutosObservableList = FXCollections.observableArrayList();
@@ -53,7 +63,7 @@ public class TelaProdutosController implements Initializable {
     		// p.getModelo();
     		// p.getTipo();
     		// p.getQtdComprada();
-    	System.out.println(ProdutosObservableList.get(0).getMarca()+"teste do obs");
+    	//System.out.println(ProdutosObservableList.get(0).getMarca()+"teste do obs");
     }
     
     
@@ -62,14 +72,24 @@ public class TelaProdutosController implements Initializable {
     	System.out.println("tela Produtos 02");
         listViewProdutos.setItems(ProdutosObservableList);
         listViewProdutos.setCellFactory(produtoCell -> new ProdutosListCell());
+        TxtProNome.setText(reg.getNome());
       
     }
     @FXML
-     private void BtnProCadastar() throws IOException {
+     private void BtnProCadastarProdutos() throws IOException {
     	App.RegUltimaTela("TelaProdutos");
+    	
     	App.setRoot("TelaCadastroProduto");
     	
     }
+    @FXML
+    private void BtnProCadastarNotas() throws IOException {
+  
+    	 
+    	 App.RegUltimaTela("TelaProdutos");
+    	 App.setRoot("TelaCadastroNotas");
+   	
+   }
     @FXML
     private void BtnProListar() throws IOException {
                   
@@ -85,7 +105,7 @@ public class TelaProdutosController implements Initializable {
     }
     @FXML
     private void BtnProLogoff() throws IOException {
-                  App.setRoot("TelaLogin03");
+                  App.setRoot(App.reg.getUltimaTela());
     }
       
     

@@ -25,6 +25,7 @@ public class TelaCadastroProdutoController {
                    novoProduto.setModelo(TxtProdModelo.getText());
                    novoProduto.setMarca(TxtProdMarca.getText());
                    novoProduto.setTipo(TxtProdTipo.getText());
+                   novoProduto.setQtdStoque(Integer.parseInt(TxtProdQtd.getText()));
                
                     
                      
@@ -32,14 +33,14 @@ public class TelaCadastroProdutoController {
                    // manda para gravar no banco o novo usuario
                   ProdutoDAO dao  = new ProdutoDAO();
                   dao.create(novoProduto);
-                  App.setRoot(App.UltimaTela);
+                  App.setRoot(App.reg.getUltimaTela());
               
          
      }
      @FXML
      private void BtnProVoltar() throws IOException {
     	 
-    	 App.setRoot(App.UltimaTela);
+    	 App.setRoot(App.reg.getUltimaTela());
     	 
      }
 }

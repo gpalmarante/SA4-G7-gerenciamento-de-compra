@@ -4,17 +4,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="ListaProdutos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sa4.TelaProdutosController">
    <children>
-      <Button layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#BtnProCadastar" text="Cadastrar novo produto" />
+      <Button layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#BtnProCadastarProdutos" text="Cadastrar novo produto" />
       <Button layoutX="173.0" layoutY="70.0" mnemonicParsing="false" onAction="#BtnProListar" prefHeight="25.0" prefWidth="104.0" text="Listar Produtos" />
       <Button layoutX="583.0" layoutY="441.0" mnemonicParsing="false" onAction="#BtnProSair" text="Sair" />
       <Button layoutX="514.0" layoutY="441.0" mnemonicParsing="false" onAction="#BtnProLogoff" text="Log off" />
-      <Label fx:id="TxtProNome" layoutX="47.0" layoutY="27.0" text="Nome Usuario" />
+      <Label fx:id="TxtProBemvindo" layoutX="45.0" layoutY="53.0" text="Bem vindo!" />
       <ListView fx:id="listViewProdutos" layoutX="173.0" layoutY="108.0" prefHeight="327.0" prefWidth="446.0" />
       <Button layoutX="286.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Listar Novos" />
       <Button layoutX="401.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Listar Em Falta" />
       <Button layoutX="516.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Listar Vencidos" />
+      <Button layoutX="14.0" layoutY="372.0" mnemonicParsing="false" onAction="#BtnProCadastarNotas" prefHeight="25.0" prefWidth="143.0" text="Cadastrar NotaFiscal" />
+      <Label fx:id="TxtProNome" layoutX="45.0" layoutY="74.0" text="usuario">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 
 package com.mycompany.sa4.ModelDAO;
 
+import com.mycompany.sa4.App;
 import com.mycompany.sa4.Banco.AcessoMysql;
 import com.mycompany.sa4.Model.Login;
 import com.mycompany.sa4.Model.Usuario;
@@ -42,7 +43,7 @@ public class UsuarioDAO {
        
         
         try{
-            stmt = con.prepareStatement("SELECT usuario, senha FROM usuarios WHERE usuario = ?;");
+            stmt = con.prepareStatement("SELECT usuario, senha,nome FROM usuarios WHERE usuario = ?;");
             stmt.setString(1,L.getUsuario());
             rs = stmt.executeQuery();
         
@@ -50,6 +51,8 @@ public class UsuarioDAO {
             	System.out.println(rs.getString("usuario")+"depois do query1");
             	UsVerifica.setUsuario(rs.getString("usuario"));
             	UsVerifica.setSenha(rs.getString("senha"));
+            	UsVerifica.setNome(rs.getString("nome"));
+            	
             	System.out.println(UsVerifica.getSenha()+"depois do query2");
             }
             }
@@ -76,6 +79,8 @@ public class UsuarioDAO {
      //   if (((L.getUsuario()).equals == (UsVerifica.getUsuario())) && ((L.getSenha()) == (UsVerifica.getSenha()))){
            if ( LN.equals(VN) && LS.equals(VS)) {
         	 System.out.println("resultado verdadeiro");
+        	 App.RegNome(UsVerifica.getNome());
+        	 System.out.println(UsVerifica.getNome());
         	return true;
             }else{
             	System.out.println("resultado falso");

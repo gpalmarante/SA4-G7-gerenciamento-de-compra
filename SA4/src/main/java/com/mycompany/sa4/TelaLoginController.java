@@ -37,6 +37,7 @@ public class TelaLoginController {
                 UsuarioDAO dao  = new UsuarioDAO();
                 
                 if (dao.verifcaLogin(login)){
+                	App.RegUltimaTela("TelaLogin03");
                     App.setRoot("TelaProdutos");
                     System.out.println("login");
                 }
@@ -53,10 +54,12 @@ public class TelaLoginController {
     }
     @FXML 
     private void BtnAcaoCadastar()throws IOException {
-        App.setRoot("TelaCadastro");
+   	App.RegUltimaTela("TelaLogin03");
+       App.setRoot("TelaCadastro");
     }
-    @FXML
-    private void BtnAcaoCadastarProduto() throws IOException{
-         App.setRoot("TelaCadastroProduto");
-    }
+ //   @FXML
+ //   private void BtnAcaoCadastarProduto() throws IOException{
+ //   	App.RegUltimaTela("TelaLogin03");
+ //        App.setRoot("TelaCadastroProduto");
+ //   }
 }

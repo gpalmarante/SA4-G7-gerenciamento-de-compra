@@ -21,106 +21,63 @@ public class Produtos {
 	    
 	    	private int ValorCompra;
 	    	private int ValorVenda;
+	    	
+	    	
+	    	public int getId() {
+				return Id;
+			}
+			public void setId(int id) {
+				Id = id;
+			}
+			public String getModelo() {
+				return Modelo;
+			}
+			public void setModelo(String modelo) {
+				Modelo = modelo;
+			}
+			public String getMarca() {
+				return Marca;
+			}
+			public void setMarca(String marca) {
+				Marca = marca;
+			}
+			public String getTipo() {
+				return Tipo;
+			}
+			public void setTipo(String tipo) {
+				Tipo = tipo;
+			}
+			public int getQtdComprada() {
+				return QtdComprada;
+			}
+			public void setQtdComprada(int qtdComprada) {
+				QtdComprada = qtdComprada;
+			}
+			public int getQtdStoque() {
+				return QtdStoque;
+			}
+			public void setQtdStoque(int qtdStoque) {
+				QtdStoque = qtdStoque;
+			}
+			public int getQtdVendidas() {
+				return QtdVendidas;
+			}
+			public void setQtdVendidas(int qtdVendidas) {
+				QtdVendidas = qtdVendidas;
+			}
+			public int getValorCompra() {
+				return ValorCompra;
+			}
+			public void setValorCompra(int valorCompra) {
+				ValorCompra = valorCompra;
+			}
+			public int getValorVenda() {
+				return ValorVenda;
+			}
+			public void setValorVenda(int valorVenda) {
+				ValorVenda = valorVenda;
+			}
+			
 	    
-	    
-	public int getQtdStoque() {
-			return QtdStoque;
-		}
-
-	public void setQtdStoque(int qtdStoque) {
-			QtdStoque = qtdStoque;
-		}
-
-	public int getQtdVendidas() {
-			return QtdVendidas;
-		}
-
-	public void setQtdVendidas(int qtdVendidas) {
-			QtdVendidas = qtdVendidas;
-		}
-
-	public int getValorCompra() {
-			return ValorCompra;
-		}
-
-	public void setValorCompra(int valorCompra) {
-			ValorCompra = valorCompra;
-		}
-
-	public int getValorVenda() {
-			return ValorVenda;
-		}
-
-	public void setValorVenda(int valorVenda) {
-			ValorVenda = valorVenda;
-		}
-
-	public void setQtdComprada(int qtdComprada) {
-			QtdComprada = qtdComprada;
-		}
-
-	/**
-     * @return the Id
-     */
-    public int getId() {
-        return Id;
-    }
-
-    /**
-     * @param Id the Id to set
-     */
-    public void setId(int Id) {
-        this.Id = Id;
-    }
-
-    /**
-     * @return the Modelo
-     */
-    public String getModelo() {
-        return Modelo;
-    }
-
-    /**
-     * @param Modelo the Modelo to set
-     */
-    public void setModelo(String Modelo) {
-        this.Modelo = Modelo;
-    }
-
-    /**
-     * @return the Marca
-     */
-    public String getMarca() {
-        return Marca;
-    }
-
-    /**
-     * @param Marca the Marca to set
-     */
-    public void setMarca(String Marca) {
-        this.Marca = Marca;
-    }
-
-    /**
-     * @return the Tipo
-     */
-    public String getTipo() {
-        return Tipo;
-    }
-
-    /**
-     * @param Tipo the Tipo to set
-     */
-    public void setTipo(String Tipo) {
-        this.Tipo = Tipo;
-    }
-
-    /**
-     * @return the QtdComprada
-     */
-    public int getQtdComprada() {
-        return QtdComprada;
-    }
-
       
 }

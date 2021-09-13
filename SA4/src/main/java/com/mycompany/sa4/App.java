@@ -8,22 +8,25 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import com.mycompany.sa4.Model.Registros;
+
 
 /**
  * JavaFX App
  */
 public class App extends Application {
 
-    static String UltimaTela = "";
-	private static Scene scene;
-	 
    
+	private static Scene scene;
+	static Registros reg = new Registros(); 
     
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("TelaLogin03"), 640, 480);
+
+    	scene = new Scene(loadFXML("TelaLogin03"), 640, 480);
         stage.setScene(scene);
         stage.show();
+       
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -42,9 +45,14 @@ public class App extends Application {
     }
     public static void RegUltimaTela(String tela) {
     	
-    	UltimaTela = tela ;
+    	reg.setUltimaTela(tela);
+    	    	
+    }public static void RegNome(String nome) {
     	
-    	
+    	reg.setNome(nome);
+    	    	
     }
+
+    
   
 }
